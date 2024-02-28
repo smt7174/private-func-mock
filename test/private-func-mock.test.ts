@@ -5,6 +5,7 @@
 // example test. To run these tests, uncomment this file along with the
 // example resource in lib/private-func-mock-stack.ts
 test('SQS Queue Created', () => {
+  expect(1).toBe(1);
 //   const app = new cdk.App();
 //     // WHEN
 //   const stack = new PrivateFuncMock.PrivateFuncMockStack(app, 'MyTestStack');

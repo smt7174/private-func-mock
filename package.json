@@ -7,15 +7,21 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "test": "jest",
-    "cdk": "cdk"
+    "test": "ts-node -O '{\"module\":\"commonjs\"}' node_modules/jest/bin/jest.js",
+    "test2": "jest",
+    "cdk": "npx cdk"
   },
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.133",
     "@types/jest": "^29.5.11",
     "@types/node": "20.11.14",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.1.2",
+    "@types/rewire": "^2.5.30",
     "aws-cdk": "2.126.0",
+    "babel-plugin-rewire": "^1.2.0",
+    "babel-plugin-rewire-ts": "^1.4.0",
+    "jest": "^29.7.0",
+    "rewire": "^7.0.0",
+    "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "typescript": "~5.3.3"
   },
@@ -23,5 +29,13 @@
     "aws-cdk-lib": "2.126.0",
     "constructs": "^10.0.0",
     "source-map-support": "^0.5.21"
-  }
+  },
+  "description": "This is a blank project for CDK development with TypeScript.",
+  "main": "jest.config.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
 }
